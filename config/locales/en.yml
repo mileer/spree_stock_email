@@ -11,5 +11,10 @@ en:
         already_registered: "Already registered for notifications on this product"
         back_in_stock_email_message: "We'll email you when %{product} is back in stock!"
       email:
-          subject: "Product %{product} is back in stock!"
+        subject: "Product %{product} is back in stock!"
+        text: "We're pleased to let you know that %{product} (%{variant}) is back in stock  — if you need help with sizes or have questions, please call, email, or chat and we'll do our best."
+      form:
+        text: "Product temporarily unavailable. Click on link bellow to be notified when is back in stock."
+        label: "Product temporarily unavailable. Type your mail bellow to be notified when is back in stock."
+        button: "Notify me"
     stock_mailer: "Stock Mailer"

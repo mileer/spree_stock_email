@@ -11,5 +11,10 @@ pt-BR:
         already_registered: "já está cadastrado. Um email será enviado para você quando este produto estiver em estoque."
         back_in_stock_email_message: "Um email será enviado para você quando o %{product} estiver em estoque!"
       email:
-          subject: "Produto %{product} está em estoque"
+        subject: "Produto %{product} está em estoque"
+        text: "Temos o prazer de informá-lo que o produto %{product} (%{variant}) está de volta em estoque - se você precisar de ajuda ou tiver dúvidas, entre em contato para que possamos ajudá-lo."
+      form:
+        text: "Produto temporariamente indisponível. Clique no link abaixo para ser notificado quando voltar ao estoque."
+        label: "Produto temporariamente indisponível. Informe o seu e-mail abaixo para ser notificado quando voltar ao estoque."
+        button: "Avise-me"
     stock_mailer: "Emails de Aviso de Estoque"
