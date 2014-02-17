@@ -9,7 +9,8 @@ module SpreeStockEmail
       end
 
       def add_stylesheets
-        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_stock_email\n", :before => /\*\//, :verbose => true
+        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_stock_email\n", :before => /\*\//, :verbose => true if File.exist?('app/assets/stylesheets/store/all.css')
+        inject_into_file 'app/assets/stylesheets/store/all.scss', " *= require store/spree_stock_email\n", :before => /\*\//, :verbose => true if File.exist?('app/assets/stylesheets/store/all.scss')
       end
 
       def add_migrations
