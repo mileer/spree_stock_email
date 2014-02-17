@@ -1,3 +1,6 @@
 /*
  *= require store/spree_frontend
 */
+div#notify_stock p {
+  padding: 0;
+}

@@ -1,0 +1,15 @@
+<div id='notify_stock'>
+  <%= hidden_field_tag :variant_in_stock, @product.master.in_stock? %>
+  <%= hidden_field_tag :base_url, stock_emails_path(stock_email: {variant: nil}) %>
+<% if spree_current_user %>
+  <p><b><%= Spree.t('stock_email.form.text') %></b></p>
+  <%= link_to Spree.t('stock_email.form.button'), stock_emails_path(stock_email: {variant: @product.master.id}), method: :post, id: :notify_me, class: 'button' %>
+<% else %>
+  <%= form_for :stock_email, url: stock_emails_path, id: :notify_me do |form| %>
+    <%= form.hidden_field :variant, value: @product.master.id %>
+    <p><b><%= Spree.t('stock_email.form.label') %></b></p>
+    <%= form.text_field :email %>
+    <%= button_tag Spree.t('stock_email.form.button'), class: 'button', type: :submit %>
+  <% end %>
+<% end %>
+</div>
